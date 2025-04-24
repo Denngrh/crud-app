@@ -53,8 +53,8 @@
                     @foreach ($penjualan as $item)
                     <tr>
                         <td>{{ $item->faktur }}</td>
-                        <td>{{ $item->pelanggan->namapelanggan }}</td>
-                        <td>{{ $item->barang->namabarang }}</td> <!-- Tampilkan nama barang -->
+                        <td>{{ $item->barang->namabarang ?? 'Barang telah dihapus' }}</td>
+                        <td>{{ $item->pelanggan->namapelanggan ?? 'Pelanggan telah dihapus' }}</td>
                         <td>{{ $item->tanggalpenjualan }}</td>
                         <td>
                             <button type="button" class="btn btn-danger btn-sm btn-delete" data-id="{{ $item->faktur }}">Hapus</button>

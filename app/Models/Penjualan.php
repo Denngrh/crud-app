@@ -20,14 +20,14 @@ class Penjualan extends Model
     'tanggalpenjualan',
     ];
 
+    
     public function barang()
-{
-    return $this->belongsTo(Barang::class, 'kodebarang', 'kodebarang');
-}
-
-
+    {
+        return $this->belongsTo(Barang::class, 'kodebarang', 'kodebarang')->withDefault();
+    }
+    
     public function pelanggan()
     {
-        return $this->belongsTo(Pelanggan::class, 'nopelanggan', 'nopelanggan');
+        return $this->belongsTo(Pelanggan::class, 'nopelanggan', 'nopelanggan')->withDefault();
     }
 }

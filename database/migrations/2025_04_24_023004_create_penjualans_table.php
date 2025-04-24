@@ -13,13 +13,20 @@ return new class extends Migration
     {
         Schema::create('penjualan', function (Blueprint $table) {
             $table->increments('faktur');
-            $table->unsignedInteger('nopelanggan'); 
-            $table->unsignedInteger('kodebarang'); 
+            $table->unsignedInteger('nopelanggan')->nullable(); // Ubah menjadi nullable
+            $table->unsignedInteger('kodebarang')->nullable(); // Ubah menjadi nullable
             $table->string('tanggalpenjualan', 25);
             $table->timestamps();
     
-            $table->foreign('nopelanggan')->references('nopelanggan')->on('pelanggan')->onDelete('cascade');
-            $table->foreign('kodebarang')->references('kodebarang')->on('barang')->onDelete('cascade');
+            $table->foreign('nopelanggan')
+                ->references('nopelanggan')
+                ->on('pelanggan')
+                ->onDelete('set null'); // Ubah menjadi set null
+
+            $table->foreign('kodebarang')
+                ->references('kodebarang')
+                ->on('barang')
+                ->onDelete('set null'); // Ubah menjadi set null
         });
     }
 
