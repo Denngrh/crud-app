@@ -18,7 +18,7 @@
                     <a href="{{ route('pelanggan.index') }}" class="nav-link">
                         <i class="bi bi-people-fill"></i> PELANGGAN
                     </a>
-                    <a href="{{ route('home') }}" class="nav-link">
+                    <a href="{{ route('penjualan.index') }}" class="nav-link">
                         <i class="bi bi-person-badge-fill"></i> PENJUALAN
                     </a>
                 </div>
@@ -44,7 +44,7 @@
                     <div class="card mb-3 shadow-sm border-0" style="background-color: #f8f9fa;">
                         <div class="card-body text-center">
                             <h5 class="card-title text-success"><i class="bi bi-person-badge-fill"></i> Total Penjualan</h5>
-                            <p class="card-text h4">0</p>
+                            <p class="card-text h4">{{ $totalPenjualan }}</p>
                         </div>
                     </div>
                 </div>

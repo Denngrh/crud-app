@@ -2,6 +2,7 @@
 @extends('temp.app')
 
 @section('content')
+<title>Pelanggan</title>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
@@ -19,8 +20,8 @@
                     <a href="{{ route('pelanggan.index') }}" class="nav-link active">
                         <i class="bi bi-people-fill"></i> PELANGGAN
                     </a>
-                    <a href="{{ route('home') }}" class="nav-link">
-                        <i class="bi bi-person-badge-fill"></i> PETUGAS
+                    <a href="{{ route('penjualan.index') }}" class="nav-link">
+                        <i class="bi bi-person-badge-fill"></i> PENJUALAN
                     </a>
                 </div>
                 <hr>

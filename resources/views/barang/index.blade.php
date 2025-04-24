@@ -1,6 +1,7 @@
 @extends('temp.app')
 
 @section('content')
+<title>Barang</title>
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
@@ -18,8 +19,8 @@
                     <a href="{{ route('pelanggan.index') }}" class="nav-link ">
                         <i class="bi bi-people-fill"></i> PELANGGAN
                     </a>
-                    <a href="{{ route('home') }}" class="nav-link">
-                        <i class="bi bi-person-badge-fill"></i> PETUGAS
+                    <a href="{{ route('penjualan.index') }}" class="nav-link">
+                        <i class="bi bi-person-badge-fill"></i> PENJUALAN
                     </a>
                 </div>
                 <hr>
@@ -82,7 +83,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="hargabarang{{ $item->kodebarang }}" class="form-label">Harga Barang</label>
-                        <input type="text" class="form-control" id="hargabarang{{ $item->kodebarang }}" name="hargabarang" value="{{ $item->hargabarang }}" required>
+                        <input type="number" class="form-control" id="hargabarang{{ $item->kodebarang }}" name="hargabarang" value="{{ $item->hargabarang }}" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -119,7 +120,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="hargabarang" class="form-label">Harga Barang</label>
-                        <input type="text" class="form-control" id="hargabarang" name="hargabarang" required>
+                        <input type="number" class="form-control" id="hargabarang" name="hargabarang" required>
                     </div>
                 </div>
                 <div class="modal-footer">
