@@ -16,10 +16,10 @@
                         <i class="bi bi-box-seam"></i> BARANG
                     </a>
                     <a href="{{ route('pelanggan.index') }}" class="nav-link">
-                        <i class="bi bi-people-fill"></i> Pelanggan
+                        <i class="bi bi-people-fill"></i> PELANGGAN
                     </a>
                     <a href="{{ route('home') }}" class="nav-link">
-                        <i class="bi bi-person-badge-fill"></i> PETUGAS
+                        <i class="bi bi-person-badge-fill"></i> PENJUALAN
                     </a>
                 </div>
                 <hr>
@@ -35,15 +35,15 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="card mb-3 shadow-sm border-0" style="background-color: #f8f9fa;">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-primary"><i class="bi bi-people-fill"></i> Total Member</h5>
-                            <p class="card-text h4">0</p>
+                            <h5 class="card-title text-primary">  <i class="bi bi-people-fill"></i> Total Pelanggan</h5>
+                            <p class="card-text h4">{{ $totalPelanggan }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card mb-3 shadow-sm border-0" style="background-color: #f8f9fa;">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-success"><i class="bi bi-person-badge-fill"></i> Total Petugas</h5>
+                            <h5 class="card-title text-success"><i class="bi bi-person-badge-fill"></i> Total Penjualan</h5>
                             <p class="card-text h4">0</p>
                         </div>
                     </div>

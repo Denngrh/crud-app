@@ -15,8 +15,8 @@
                     <a href="{{ route('barang.index') }}" class="nav-link active">
                         <i class="bi bi-box-seam"></i> BARANG
                     </a>
-                    <a href="{{ route('home') }}" class="nav-link">
-                        <i class="bi bi-people-fill"></i> MEMBER
+                    <a href="{{ route('pelanggan.index') }}" class="nav-link ">
+                        <i class="bi bi-people-fill"></i> PELANGGAN
                     </a>
                     <a href="{{ route('home') }}" class="nav-link">
                         <i class="bi bi-person-badge-fill"></i> PETUGAS

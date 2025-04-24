@@ -34,20 +34,22 @@ class PelangganController extends Controller
         return view('pelanggan.edit', compact('pelanggan'));
     }
 
-    public function update(Request $request, Pelanggan $pelanggan)
-    {
-        $request->validate([
-            'namapelanggan' => 'required|max:25',
-            'alamat' => 'required|max:25',
-        ]);
+    public function update(Request $request, $nopelanggan)
+{
+    $request->validate([
+        'namapelanggan' => 'required|max:25',
+        'alamat' => 'required|max:25',
+    ]);
 
-        $pelanggan->update($request->all());
-        return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil diperbarui.');
-    }
+    $pelanggan = Pelanggan::where('nopelanggan', $nopelanggan)->firstOrFail();
+    $pelanggan->update($request->all());
+    return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil diperbarui.');
+}
 
-    public function destroy(Pelanggan $pelanggan)
-    {
-        $pelanggan->delete();
-        return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil dihapus.');
-    }
+    public function destroy($nopelanggan)
+{
+    $pelanggan = Pelanggan::where('nopelanggan', $nopelanggan)->firstOrFail();
+    $pelanggan->delete();
+    return redirect()->route('pelanggan.index')->with('success', 'Pelanggan berhasil dihapus.');
+}
 }
